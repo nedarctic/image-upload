@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
     "@apollo/client": "^3.12.4",
@@ -15,6 +17,7 @@
     "@pothos/plugin-prisma": "^4.4.0",
     "@pothos/plugin-relay": "^4.3.0",
     "@prisma/client": "^6.1.0",
+    "@prisma/extension-accelerate": "^1.2.1",
     "aws-sdk": "^2.1692.0",
     "graphql": "^16.10.0",
     "graphql-yoga": "^5.10.6",

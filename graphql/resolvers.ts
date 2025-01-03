@@ -3,7 +3,7 @@ import prisma from "@/lib/prisma";
 export const resolvers = {
   Query: {
     links: () => {
-      return prisma.link.findMany();
+      return prisma.link.findMany({cacheStrategy: {ttl: 60}});
     },
   },
 };
