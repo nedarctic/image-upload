@@ -1,16 +1,9 @@
 import Header from './Header';
 
-interface HeaderProps {
-    currentUser: {
-        email: string,
-        role: string,
-    }
-}
-
-export const ConditionalHeader = ({currentUser}: HeaderProps) => {
+export const ConditionalHeader = () => {
     return (
         <div>
-            <Header currentUser={currentUser}/>
+            <Header/>
         </div>
     );
 }
